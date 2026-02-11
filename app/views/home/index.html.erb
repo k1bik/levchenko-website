@@ -1,6 +1,16 @@
+<div class="video-wrapper">
+  <div class="video-container">
+    <video autoplay muted loop playsinline controls>
+      <source src="/main.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+    <p class="video-title">Showreel 2025</p>
+  </div>
+</div>
+
 <div class="before-after-image-slider-container">
-  <%= image_tag "car-before.png", class: "image-before slider-image" %>
-  <%= image_tag "car-after.png", class: "image-after slider-image" %>
+  <%= image_tag "/car-before.png", class: "image-before slider-image", loading: "lazy" %>
+  <%= image_tag "/car-after.png", class: "image-after slider-image", loading: "lazy" %>
   <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
   <div class="slider-line" aria-hidden="true"></div>
   <div class="slider-button" aria-hidden="true">
