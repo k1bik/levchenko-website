@@ -1,29 +1,21 @@
-body {
-  background-image: linear-gradient(to bottom, #333333, #000000);
-}
-
-.video-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.video-wrapper .video-title {
-  font-size: 90px;
-  font-weight: 600;
-  text-align: center;
+body { background-image: linear-gradient(to bottom, #333333, #000000); }
+.container {
   margin-top: 2rem;
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.text {
+  font-size: 20px;
+  line-height: 1.5;
   background: linear-gradient(45deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   text-shadow: 0 4px 10px rgba(255,255,255,0.2);
 }
-.video-wrapper .video-container {
-  width: 40%;
-  min-width: 800px;
-  max-width: 1400px;
-  padding: 4rem;
+.glass-container {
+  padding: 3rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
@@ -34,10 +26,16 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.5),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
     inset 0 0 0px 0px rgba(255, 255, 255, 0);
-  position: relative;
+  transition: transform 0.3s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 8rem;
 }
-.video-wrapper .video-container::before {
+.glass-container:hover { transform: scale(1.02); }
+.glass-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -46,7 +44,7 @@ body {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
 }
-.video-wrapper .video-container::after {
+.glass-container::after {
   content: '';
   position: absolute;
   top: 0;
@@ -55,7 +53,49 @@ body {
   height: 100%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), transparent, rgba(255, 255, 255, 0.3));
 }
-.video-wrapper .video-container video {
+.glass-container video {
   border-radius: 1rem;
-  width: 100%;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+}
+.video-title {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+/* Мобильные устройства */
+@media (max-width: 576px) {
+  .glass-container video { width: 250px; }
+  .text { font-size: 12px; }
+  .video-title { font-size: 24px; }
+  .glass-container {
+    padding: 1rem;
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+  .container { padding: 0 8px; }
+}
+/* Планшеты портрет */
+@media (min-width: 577px) and (max-width: 768px) {
+  .glass-container video { width: 500px; }
+  .text { font-size: 14px; }
+  .video-title { font-size: 32px; }
+  .glass-container {
+    padding: 2rem;
+    flex-direction: column;
+  }
+}
+/* Планшеты альбом / малые ноуты */
+@media (min-width: 769px) and (max-width: 992px) {
+  .text { font-size: 14px; }
+  .video-title { font-size: 50px; }
+  .glass-container video { width: 600px; }
+  .glass-container { flex-direction: column; }
+}
+/* Ноутбуки */
+@media (min-width: 993px) and (max-width: 1400px) {
+  .text { font-size: 16px; }
+  .video-title { font-size: 60px; }
+  .glass-container video { width: 700px; }
 }

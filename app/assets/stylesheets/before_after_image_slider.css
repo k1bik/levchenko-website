@@ -4,9 +4,8 @@
   overflow: hidden;
   border-radius: 1rem;
   --position: 50%;
-  width: 40%;
-  max-width: 1200px;
-  min-width: 500px;
+  min-width: 70%;
+  max-width: 90%;
 }
 .before-after-image-slider-container img {
   display: block;
@@ -58,4 +57,18 @@
   transform: translate(-50%, -50%);
   pointer-events: none;
   box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+}
+
+@media (max-width: 576px) {
+  .before-after-image-slider-container {
+    min-width: 90%;
+    max-width: 95%;
+  }
+}
+/* Планшеты портрет */
+@media (min-width: 577px) and (max-width: 768px) {
+  .before-after-image-slider-container {
+    min-width: 90%;
+    max-width: 95%;
+  }
 }

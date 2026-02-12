@@ -1,27 +1,73 @@
-<div class="video-wrapper">
-  <div class="video-container">
-    <video autoplay muted loop playsinline controls>
+<div class="container">
+  <div
+    class="glass-container"
+    style="margin-top: 2rem; flex-direction: column; align-items: center; justify-content: center; width: max-content; margin-left: auto; margin-right: auto;"
+  >
+    <video controls>
       <source src="/main.mp4" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
-    <p class="video-title">Showreel 2025</p>
+    <p class="video-title text">Showreel 2025</p>
   </div>
-</div>
 
-<div class="before-after-image-slider-container">
-  <%= image_tag "/car-before.png", class: "image-before slider-image", loading: "lazy" %>
-  <%= image_tag "/car-after.png", class: "image-after slider-image", loading: "lazy" %>
-  <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
-  <div class="slider-line" aria-hidden="true"></div>
-  <div class="slider-button" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-      <rect width="256" height="256" fill="none"></rect>
-      <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-      <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-      <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-      <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-      <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-    </svg>
+  <div class="glass-container">
+    <div class="before-after-image-slider-container">
+      <%= image_tag "/car-before.png", class: "image-before slider-image", loading: "lazy" %>
+      <%= image_tag "/car-after.png", class: "image-after slider-image", loading: "lazy" %>
+      <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
+      <div class="slider-line" aria-hidden="true"></div>
+      <div class="slider-button" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+          <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+        </svg>
+      </div>
+    </div>
+    <p class="text">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+  </div>
+
+  <div class="glass-container">
+    <p class="text">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+    <div class="before-after-image-slider-container">
+      <%= image_tag "/Cells_Before.png", class: "image-before slider-image", loading: "lazy" %>
+      <%= image_tag "/Cells_After.png", class: "image-after slider-image", loading: "lazy" %>
+      <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
+      <div class="slider-line" aria-hidden="true"></div>
+      <div class="slider-button" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+          <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="glass-container">
+    <div class="before-after-image-slider-container">
+      <%= image_tag "/Cells_Before_NoColor.png", class: "image-before slider-image", loading: "lazy" %>
+      <%= image_tag "/Cells_After.png", class: "image-after slider-image", loading: "lazy" %>
+      <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
+      <div class="slider-line" aria-hidden="true"></div>
+      <div class="slider-button" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+          <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+        </svg>
+      </div>
+    </div>
+    <p class="text">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
   </div>
 </div>
 
