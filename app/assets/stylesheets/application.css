@@ -15,7 +15,7 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   text-shadow: 0 4px 10px rgba(255,255,255,0.2);
 }
 .glass-container {
-  padding: 3rem;
+  padding: 2rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
@@ -32,7 +32,7 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   flex-direction: row;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 .glass-container:hover { transform: scale(1.02); }
 .glass-container::before {
@@ -55,20 +55,19 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
 }
 .glass-container video {
   border-radius: 1rem;
-  width: 800px;
+  width: 900px;
   justify-content: center;
   align-items: center;
 }
 .video-title {
-  font-size: 80px;
+  font-size: 36px;
   font-weight: 600;
 }
 
 /* Мобильные устройства */
 @media (max-width: 576px) {
-  .glass-container video { width: 250px; }
+  .glass-container video { width: 300px; }
   .text { font-size: 12px; }
-  .video-title { font-size: 24px; }
   .glass-container {
     padding: 1rem;
     flex-direction: column;
@@ -80,7 +79,7 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
 @media (min-width: 577px) and (max-width: 768px) {
   .glass-container video { width: 500px; }
   .text { font-size: 14px; }
-  .video-title { font-size: 32px; }
+  .video-title { font-size: 18px; }
   .glass-container {
     padding: 2rem;
     flex-direction: column;
@@ -89,64 +88,13 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
 /* Планшеты альбом / малые ноуты */
 @media (min-width: 769px) and (max-width: 992px) {
   .text { font-size: 14px; }
-  .video-title { font-size: 50px; }
-  .glass-container video { width: 600px; }
+  .video-title { font-size: 28px; }
+  .glass-container video { width: 700px; }
   .glass-container { flex-direction: column; }
 }
 /* Ноутбуки */
 @media (min-width: 993px) and (max-width: 1400px) {
   .text { font-size: 16px; }
-  .video-title { font-size: 60px; }
-  .glass-container video { width: 700px; }
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.modal img {
-  max-width: 95%;
-  max-height: 95%;
-  object-fit: contain;
-}
-
-.modal-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 80px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-  z-index: 10000;
-}
-
-.modal-close:hover {
-  transform: scale(1.2);
-}
-
-.hidden {
-  display: none;
-}
-
-.gallery-image {
-  cursor: zoom-in;
+  .video-title { font-size: 36px; }
+  .glass-container video { width: 850px; }
 }

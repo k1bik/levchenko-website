@@ -3,39 +3,46 @@
   justify-content: center;
   align-items: center;
 }
-
-.splide {
-  margin-bottom: 5rem;
-}
-
 .splide.horizontal .splide__slide {
-  height: 800px;
+  height: 530px;
   border-radius: 1rem;
 }
-
-.splide.vertical .splide__slide  {
-  height: 900px;
-  border-radius: 1rem;
-}
-
 .splide.horizontal img {
-  width: 800px;
+  width: 700px;
+  border-radius: 1rem;
+  cursor: zoom-in;
+}
+.splide.vertical .splide__slide  {
+  height: 710px;
   border-radius: 1rem;
 }
-
 .splide.vertical img {
-  width: 500px;
+  width: 450px;
   border-radius: 1rem;
+  cursor: zoom-in;
 }
+.splide__slide:nth-child(odd) img { transform: translateY(-40px); }
+.splide__slide:nth-child(even) img { transform: translateY(40px); }
+.splide__arrows, .splide__pagination { display: none; }
+.splide { margin-bottom: 4rem; }
 
-.splide__slide:nth-child(odd) img {
-  transform: translateY(-40px);
+/* Мобильные устройства */
+@media (max-width: 576px) {
+  .splide.horizontal img { width: 300px; }
+  .splide.vertical img { width: 300px; }
+  .splide.vertical .splide__slide  { height: 460px; }
+  .splide.horizontal .splide__slide  { height: 250px; }
 }
-
-.splide__slide:nth-child(even) img {
-  transform: translateY(40px);
+/* Планшеты портрет */
+@media (min-width: 577px) and (max-width: 768px) {
+  .splide.horizontal img { width: 550px; }
 }
-
-.splide__arrows, .splide__pagination {
-  display: none;
+/* Планшеты альбом / малые ноуты */
+@media (min-width: 769px) and (max-width: 992px) {
+}
+/* Ноутбуки */
+@media (min-width: 993px) and (max-width: 1400px) {
+  .splide.horizontal img { width: 600px; }
+  .splide.vertical img { width: 400px; }
+  .splide.vertical .splide__slide  { height: 600px; }
 }
