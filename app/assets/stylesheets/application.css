@@ -63,26 +63,49 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   font-size: 36px;
   font-weight: 600;
 }
+.contacts {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+  color: white;
+  font-size: 18px;
+}
 
 /* Мобильные устройства */
 @media (max-width: 576px) {
   .glass-container video { width: 300px; }
   .text { font-size: 12px; }
+  .contacts span { display: none; }
   .glass-container {
     padding: 1rem;
     flex-direction: column;
     margin-bottom: 4rem;
   }
   .container { padding: 0 8px; }
+  .contacts {
+    flex-direction: row;
+    padding: 0.5rem;
+  }
 }
 /* Планшеты портрет */
 @media (min-width: 577px) and (max-width: 768px) {
   .glass-container video { width: 500px; }
   .text { font-size: 14px; }
   .video-title { font-size: 18px; }
+  .contacts span { display: none; }
   .glass-container {
     padding: 2rem;
     flex-direction: column;
+  }
+  .contacts {
+    flex-direction: row;
+    padding: 0.5rem;
   }
 }
 /* Планшеты альбом / малые ноуты */
@@ -91,10 +114,13 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   .video-title { font-size: 28px; }
   .glass-container video { width: 700px; }
   .glass-container { flex-direction: column; }
+  .contacts span { display: none; }
+  .contacts { flex-direction: row; }
 }
 /* Ноутбуки */
 @media (min-width: 993px) and (max-width: 1400px) {
   .text { font-size: 16px; }
   .video-title { font-size: 36px; }
   .glass-container video { width: 850px; }
+  .contacts { font-size: 14px; }
 }
