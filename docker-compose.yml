@@ -1,0 +1,50 @@
+services:
+  web:
+    image: web
+    environment:
+      - RAILS_ENV=production
+      - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+      - VIRTUAL_HOST=${APP_HOST},www.${APP_HOST}
+      - LETSENCRYPT_HOST=${APP_HOST},www.${APP_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    expose:
+      - "3000"
+    env_file:
+      - .env
+    volumes:
+      - rails_tmp:/rails/tmp
+      - rails_log:/rails/log
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:rw
+      - html:/usr/share/nginx/html
+    restart: always
+
+  letsencrypt:
+    image: nginxproxy/acme-companion
+    container_name: nginx-letsencrypt
+    depends_on:
+      - nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - certs:/etc/nginx/certs:rw
+      - html:/usr/share/nginx/html
+      - acme:/etc/acme.sh
+    environment:
+      - DEFAULT_EMAIL=${LETSENCRYPT_EMAIL}
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    restart: always
+
+volumes:
+  rails_tmp:
+  rails_log:
+  certs:
+  acme:
+  html:
