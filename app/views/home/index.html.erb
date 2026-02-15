@@ -25,22 +25,37 @@
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-horizontal1.png") %>" alt="Логотип СЛПК" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-horizontal1.png") %>" alt="Carousel photo 1" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-horizontal2.png") %>" alt="Логотип Knauf" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-horizontal2.png") %>" alt="Carousel photo 2" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-horizontal3.png") %>" alt="Логотип Кама" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-horizontal3.png") %>" alt="Carousel photo 3" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-horizontal4.png") %>" alt="Логотип Сегежа" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-horizontal4.png") %>" alt="Carousel photo 4" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-horizontal5.png") %>" alt="Логотип Albertin" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-horizontal5.png") %>" alt="Carousel photo 5" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-horizontal6.png") %>" alt="Логотип ПЦБК" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-horizontal6.png") %>" alt="Carousel photo 6" loading="lazy" class="gallery-image">
+      </li>
+      <li class="splide__slide">
+        <img src="<%= asset_path("/carousel-horizontal7.png") %>" alt="Carousel photo 7" loading="lazy" class="gallery-image">
+      </li>
+      <li class="splide__slide">
+        <img src="<%= asset_path("/carousel-horizontal8.png") %>" alt="Carousel photo 8" loading="lazy" class="gallery-image">
+      </li>
+      <li class="splide__slide">
+        <img src="<%= asset_path("/carousel-horizontal9.png") %>" alt="Carousel photo 9" loading="lazy" class="gallery-image">
+      </li>
+      <li class="splide__slide">
+        <img src="<%= asset_path("/carousel-horizontal10.png") %>" alt="Carousel photo 10" loading="lazy" class="gallery-image">
+      </li>
+      <li class="splide__slide">
+        <img src="<%= asset_path("/carousel-horizontal11.png") %>" alt="Carousel photo 11" loading="lazy" class="gallery-image">
       </li>
     </ul>
   </div>
@@ -64,11 +79,18 @@
         </svg>
       </div>
     </div>
-    <p class="text">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+    <p class="text">
+      Первым этапом добавления компьютерной графики является трекинг, который был выполнен в Blender, поскольку дальнейшее построение сцены будет также производится в Blender.
+    </p>
+    <div class="logos-container right">
+      <%= image_tag "/blender.png", alt: "Blender logo", loading: "lazy" %>
+      <%= image_tag "/nuke.png", alt: "Nuke logo", loading: "lazy" %>
+      <%= image_tag "/davinci_resolve.png", alt: "DaVinci Resolve logo", loading: "lazy" %>
+    </div>
   </div>
 
   <div class="glass-container">
-    <p class="text">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+    <p class="text">После трекинга воссоздаются объекты из исходного видео в 3D пространстве, основываясь на их реальном расположении и реальных размерах.</p>
     <div class="before-after-image-slider-container">
       <%= image_tag "/plants-before.png", class: "image-before slider-image", loading: "lazy" %>
       <%= image_tag "/plants-after.png", class: "image-after slider-image", loading: "lazy" %>
@@ -85,6 +107,11 @@
         </svg>
       </div>
     </div>
+    <div class="logos-container left">
+      <%= image_tag "/blender.png", alt: "Blender logo", loading: "lazy" %>
+      <%= image_tag "/nuke.png", alt: "Nuke logo", loading: "lazy" %>
+      <%= image_tag "/davinci_resolve.png", alt: "DaVinci Resolve logo", loading: "lazy" %>
+    </div>
   </div>
 </div>
 
@@ -97,34 +124,34 @@
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical1.png") %>" alt="Логотип СЛПК" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical1.png") %>" alt="carousel photo 1" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical2.png") %>" alt="Логотип Knauf" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical2.png") %>" alt="carousel photo 2" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical3.png") %>" alt="Логотип Кама" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical3.png") %>" alt="carousel photo 3" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical4.png") %>" alt="Логотип Сегежа" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical4.png") %>" alt="carousel photo 4" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical5.png") %>" alt="Логотип Albertin" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical5.png") %>" alt="carousel photo 5" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical6.png") %>" alt="Логотип ПЦБК" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical6.png") %>" alt="carousel photo 6" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical7.png") %>" alt="Логотип ПЦБК" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical7.png") %>" alt="carousel photo 7" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical8.png") %>" alt="Логотип ПЦБК" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical8.png") %>" alt="carousel photo 8" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical9.png") %>" alt="Логотип ПЦБК" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical9.png") %>" alt="carousel photo 9" loading="lazy" class="gallery-image">
       </li>
       <li class="splide__slide">
-        <img src="<%= asset_path("/carousel-vertical10.png") %>" alt="Логотип ПЦБК" loading="lazy" class="gallery-image">
+        <img src="<%= asset_path("/carousel-vertical10.png") %>" alt="carousel photo 10" loading="lazy" class="gallery-image">
       </li>
     </ul>
   </div>
@@ -148,11 +175,16 @@
         </svg>
       </div>
     </div>
-    <p class="text">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+    <p class="text">На следующем этапе используя Nuke корректируется HDRI, освещение и текстуры 3D-объектов, чтобы они соответствовали по свету и цвету исходному видео.</p>
+    <div class="logos-container right">
+      <%= image_tag "/blender.png", alt: "Blender logo", loading: "lazy" %>
+      <%= image_tag "/nuke.png", alt: "Nuke logo", loading: "lazy" %>
+      <%= image_tag "/davinci_resolve.png", alt: "DaVinci Resolve logo", loading: "lazy" %>
+    </div>
   </div>
 
   <div class="glass-container">
-    <p class="text">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+    <p class="text">На финальном этапе в DaVinci Resolve были собраны все композитные слои и была проведена финальная цветокоррекция, чтобы CG и живое видео выглядели единым целым.</p>
     <div class="before-after-image-slider-container">
       <%= image_tag "/waves-before.png", class: "image-before slider-image", loading: "lazy" %>
       <%= image_tag "/waves-after.png", class: "image-after slider-image", loading: "lazy" %>
@@ -168,6 +200,11 @@
           <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
         </svg>
       </div>
+    </div>
+    <div class="logos-container left">
+      <%= image_tag "/blender.png", alt: "Blender logo", loading: "lazy" %>
+      <%= image_tag "/nuke.png", alt: "Nuke logo", loading: "lazy" %>
+      <%= image_tag "/davinci_resolve.png", alt: "DaVinci Resolve logo", loading: "lazy" %>
     </div>
   </div>
 </div>

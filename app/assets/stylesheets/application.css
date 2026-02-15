@@ -1,4 +1,35 @@
-body { background-image: linear-gradient(to bottom, #333333, #000000); }
+@font-face {
+  font-family: "B612";
+  src: url("/fonts/B612-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "B612";
+  src: url("/fonts/B612-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "B612";
+  src: url("/fonts/B612-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "B612";
+  src: url("/fonts/B612-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+body {
+  font-family: "B612", sans-serif;
+  background-image: linear-gradient(to bottom, #333333, #000000);
+}
 .container {
   margin-top: 2rem;
   max-width: 1536px;
@@ -6,6 +37,7 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   padding: 0 16px;
 }
 .text {
+  font-family: "B612", sans-serif;
   font-size: 20px;
   line-height: 1.5;
   background: linear-gradient(45deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
@@ -15,6 +47,7 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   text-shadow: 0 4px 10px rgba(255,255,255,0.2);
 }
 .glass-container {
+  position: relative;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(50px);
@@ -60,10 +93,12 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   align-items: center;
 }
 .video-title {
+  font-family: "B612", sans-serif;
   font-size: 36px;
   font-weight: 600;
 }
 .contacts {
+  font-family: "B612", sans-serif;
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -76,6 +111,25 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   color: white;
   font-size: 18px;
 }
+.logos-container {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+
+  &.left {
+    top: 1rem;
+    left: 1rem;
+  }
+  &.right {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+.logos-container img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
 
 /* Мобильные устройства */
 @media (max-width: 576px) {
@@ -84,6 +138,8 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   .contacts span { display: none; }
   .glass-container {
     padding: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     flex-direction: column;
     margin-bottom: 4rem;
   }
@@ -91,6 +147,20 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   .contacts {
     flex-direction: row;
     padding: 0.5rem;
+  }
+  .logos-container {
+    &.left {
+      top: 0.5rem;
+    }
+    &.right {
+      top: auto;
+      bottom: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+  .logos-container img {
+    width: 24px;
+    height: 24px;
   }
 }
 /* Планшеты портрет */
@@ -107,6 +177,20 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
     flex-direction: row;
     padding: 0.5rem;
   }
+  .logos-container {
+    &.left {
+      top: 0.5rem;
+    }
+    &.right {
+      top: auto;
+      bottom: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+  .logos-container img {
+    width: 24px;
+    height: 24px;
+  }
 }
 /* Планшеты альбом / малые ноуты */
 @media (min-width: 769px) and (max-width: 992px) {
@@ -114,6 +198,20 @@ body { background-image: linear-gradient(to bottom, #333333, #000000); }
   .video-title { font-size: 28px; }
   .glass-container video { width: 700px; }
   .glass-container { flex-direction: column; }
+  .logos-container {
+    &.left {
+      top: 0.5rem;
+    }
+    &.right {
+      top: auto;
+      bottom: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+  .logos-container img {
+    width: 28px;
+    height: 28px;
+  }
   .contacts span { display: none; }
   .contacts { flex-direction: row; }
 }

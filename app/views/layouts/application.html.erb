@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= "Levchenko Computer Graphics" %></title>
+    <title><%= "Levchenko CG" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Levchenko Website">
@@ -16,6 +16,8 @@
     <link rel="apple-touch-icon" href="/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
+    <%= favicon_link_tag asset_path("favicon.svg") %>
+
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "reset", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "before_after_image_slider", "data-turbo-track": "reload" %>
@@ -26,7 +28,7 @@
 
   <body>
     <div class="contacts glass-container">
-      <span>Связаться:</span>
+      <span>Контакты:</span>
       <a href="mailto:info@kostr322@gmail.com">
         <img src="/mail.png" alt="Email" width="24" height="24">
       </a>
